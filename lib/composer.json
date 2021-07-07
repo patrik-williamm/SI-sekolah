@@ -1,0 +1,6 @@
+{
+    "require": {
+        "dompdf/dompdf": "^1.0",
+        "firebase/php-jwt": "^5.4"
+    }
+}
