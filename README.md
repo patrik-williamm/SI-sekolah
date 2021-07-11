@@ -1,1 +1,1 @@
-echo # SI-sekolah
+si-sekolah
