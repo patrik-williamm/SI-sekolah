@@ -1,4 +1,7 @@
 <?php
+if (!$_SESSION['login']) {
+	header('location: index.php');
+}
 require_once 'config/config.php';
 require_once 'templates/header.php';
 require_once 'content.php';
