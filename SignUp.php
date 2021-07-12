@@ -1,4 +1,8 @@
-<?php require_once 'config/Config.php'; 
+<?php session_start();
+if (isset($_POST['login'])) {
+  header('location: admin.php');
+} 
+require_once 'config/Config.php'; 
 
 function sign($data) {
   global $conn;

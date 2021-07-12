@@ -1,5 +1,8 @@
 <?php session_start();
 require_once 'config/config.php';
+if (isset($_SESSION['login'])) {
+  header('location: admin.php');
+}
 
 if (isset($_POST['login'])) {
   $username = stripcslashes($_POST['username']);
@@ -9,6 +12,10 @@ if (isset($_POST['login'])) {
   if ($dt = mysqli_fetch_assoc($cekUsername)) {
     if (password_verify($password, $dt['password'])) {
       $_SESSION['login'] = true;
+      if (isset($_POST['remember'])) {
+        setcookie("MY-id", $dt['id']);
+        //setcookie("MY-KUE", hash('BASH65', $dt['username']));
+      }
       header('location:admin.php');
     }
   }
