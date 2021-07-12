@@ -10,7 +10,7 @@ if (!$conn) {
 	die("");
 }
 
-define('URLBASE', 'http://localhost/SI_SEKOLAH');
+define('URLBASE', 'http://localhost/SI-SEKOLAH');
 
 function viewData($query) {
 	global $conn;
